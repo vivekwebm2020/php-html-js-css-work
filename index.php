@@ -85,7 +85,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'destroy_session') {
 
 // Initialize betting balance if not already set
 if (!isset($_SESSION['balance'])) {
-    $_SESSION['balance'] = 100;
+    $_SESSION['balance'] = 200;
     $_SESSION['betting_fee'] = 10;
 }
 
@@ -110,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userBet = $_POST['bet'];
 
     // Check if the bet amount is valid
-    if ($betAmount > 0 && $betAmount <= $_SESSION['balance']) {
+    if ($betAmount > 0 && ($betAmount + $_SESSION['betting_fee']) <= $_SESSION['balance']) {
         // Generate two random dice rolls
         $dice1 = random_int(1, 6);
         $dice2 = random_int(1, 6);
