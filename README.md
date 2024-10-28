@@ -20,3 +20,6 @@ CREATE TABLE IF NOT EXISTS users (
     INDEX (created_at)
 );
 ```
+
+> Reference Links:
+> https://chatgpt.com/share/6720058f-4c64-800b-87b1-f13f33f33d01
