@@ -1,0 +1,11 @@
+# Ignore log files
+*.log
+
+# Ignore environment files
+.env
+
+# Ignore node_modules
+node_modules/
+
+db.config.php
+*.ps1
